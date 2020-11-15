@@ -1,0 +1,14 @@
+{
+"name": "/home/ireese/static.vector.tiles",
+"description": "/home/ireese/static.vector.tiles",
+"version": "2",
+"minzoom": "8",
+"maxzoom": "14",
+"center": "0.001584,-0.000365,14",
+"bounds": "0.001569,-0.000374,0.001584,-0.000365",
+"type": "overlay",
+"format": "pbf",
+"generator": "tippecanoe v1.36.0",
+"generator_options": "tippecanoe -r1 -ai '--projection=EPSG:3857' '--minimum-zoom=8' '--maximum-zoom=14' --no-tile-compression --output-to-directory /home/ireese/static.vector.tiles /home/ireese/testing/welly_render/contour_vector/wellyDEMContour50m_webmer.json",
+"json": "{\"vector_layers\": [ { \"id\": \"wellyDEMContour50m_webmer\", \"description\": \"\", \"minzoom\": 8, \"maxzoom\": 14, \"fields\": {\"ID\": \"Number\", \"elev\": \"Number\"} } ],\"tilestats\": {\"layerCount\": 1,\"layers\": [{\"layer\": \"wellyDEMContour50m_webmer\",\"count\": 53427,\"geometry\": \"LineString\",\"attributeCount\": 2,\"attributes\": [{\"attribute\": \"ID\",\"count\": 1000,\"type\": \"number\",\"values\": [0,1,10,100,1000,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,1001,10010,10011,10012,10013,10014,10015,10016,10017,10018,10019,1002,10020,10021,10022,10023,10024,10025,10026,10027,10028,10029,1003,10030,10031,10032,10033,10034,10035,10036,10037,10038,10039,1004,10040,10041,10042,10043,10044,10045,10046,10047,10048,10049,1005,10050,10051,10052,10053,10054,10055,10056,10057,10058,10059,1006,10060,10061,10062,10063,10064,10065,10066,10067,10068,10069,1007,10070,10071,10072,10073,10074,10075,10076,10077,10078,10079,1008,10080,10081,10082,10083,10084,10085,10086],\"min\": 0,\"max\": 53426},{\"attribute\": \"elev\",\"count\": 38,\"type\": \"number\",\"values\": [-100,-150,-200,-250,-300,-50,0,100,1000,1050,1100,1150,1200,1250,1300,1350,1400,1450,150,1500,1550,200,250,300,350,400,450,50,500,550,600,650,700,750,800,850,900,950],\"min\": -300,\"max\": 1550}]}]}}"
+}
