@@ -90,38 +90,17 @@ var styles = {
 
 var vector = L.vectorGrid.protobuf(vectorURL, styles);
 
-//
-
-  
-  
-//overlays
-var demMap = new L.TileLayer(dem_urlTemplate, settingsOverlay);
-  
-var dsmMap = new L.TileLayer(dsm_urlTemplate, settingsOverlay);
-
-var slopeMap = new L.TileLayer(slope_urlTemplate, settingsOverlay);
-  
-var lowlandMap = new L.TileLayer(lowland_urlTemplate, settingsLL);
-
 //basemaps
-var linzAerial = new L.TileLayer(linzAerial_urlTemplate, settings);
 
 var linzColour = new L.TileLayer(linzColour_urlTemplate, settings);
-
-var linzTopo = new L.TileLayer(linzTopo_urlTemplate, settings);
   
 var basemaps = {
-      "LINZ Colour Base Map": linzColour,
-      "LINZ Aerial Base Map": linzAerial,
-      "LINZ Topo50 Base Map": linzTopo
+      "LINZ Colour Base Map": linzColour
       };
 
 var overlays = {
-      "DEM Hillshade Overlay": demMap,
-      "DSM Hillshade Overlay": dsmMap,
-      Slope: slopeMap,
-      "Contour 50m(>z8)": vector,
-      "Lowlands(>z6) Overlay": lowlandMap};
+      "Contour 50m(>z8)": vector
+}
 
 var settingsControl = {
     collapsed: true
