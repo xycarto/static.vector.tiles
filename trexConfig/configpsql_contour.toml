@@ -2,7 +2,7 @@
 viewer = true
 
 [[datasource]]
-dbconn = "postgresql://postgres:postgres@localhost/nz_data"
+dbconn = "postgresql://postgres:postgres@localhost/dbName"
 name = "dbconn"
 default = true
 
@@ -35,7 +35,7 @@ sql = """SELECT * FROM contournztm WHERE geom && !bbox!"""
 #resolutions = [8960.0,4480.0,2240.0,1120.0,560.0,280.0,140.0,70.0,28.0,14.0,7.0,2.8,1.4,0.7,0.28,0.14,0.07]
 
 [cache.file]
-base = "/home/ireese/static.vector.tiles/contourNZTM"
+base = "static.vector.tiles/contourNZTM"
 
 [webserver]
 bind = "0.0.0.0"
