@@ -1,5 +1,7 @@
 # static.vector.tiles
 
+Site is running here: https://xycarto.github.io/static.vector.tiles/
+
 Process to create a static vector tile server using GitPages. The steps to create a vector tile cache for Web Mercator and NZTM are covered here: however the aim of this site and step-by-step guide are to deliever those tiles in NZTM format using Leaflet. The followig runs through the steps needed to:
 
 1. Extract contours in shapefile format from an elevation file
