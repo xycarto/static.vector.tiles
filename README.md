@@ -21,3 +21,6 @@ time tippecanoe --no-tile-compression --projection=EPSG:3857 --minimum-zoom=12 -
 shp2pgsql -s 2193 wellyDEMContour_NZTM.shp public.contournztm | psql -h localhost -d dbName -U userName
 
 t_rex generate --progress true --maxzoom=12 --minzoom=9 --extent=160.6,-55.95,-171.2,-25.88  --config /static.vector.tiles/trexConfig/configpsql_contour.toml
+
+find . -type f | xargs -n1 -P 1 -t -I % gzip -d -r -S .pbf %
+find . -type f | xargs -n1 -P 1 -t -I % % %.pbf
