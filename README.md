@@ -15,6 +15,7 @@ https://data.linz.govt.nz/layer/53621-wellington-lidar-1m-dem-2013/
 
 ### Build VRT
 ```cd wellington-lidar-1m-dem-2013```
+
 ```gdalbuildvrt dem.vrt *.tif```
 
 ### Contour Elevation File
@@ -44,4 +45,5 @@ See configpsql_contour.toml
 
 ### Decompress Tile Cache
 ```find . -type f | xargs -n1 -P 1 -t -I % gzip -d -r -S .pbf %```
+
 ```find . -type f | xargs -n1 -P 1 -t -I % % %.pbf```
