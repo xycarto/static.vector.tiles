@@ -72,9 +72,9 @@ var vector = L.vectorGrid.protobuf(vectorURL, styles);
 
 var linzColour = new L.TileLayer(linzColour_urlTemplate, settings);
 
-var xycartoDEMHS = new L.TileLayer(dem_urlTemplate, settings);
+var xycartoDEMHS = new L.TileLayer(dem_urlTemplate, settingsOverlay);
 
-var xycartoDSMHS = new L.TileLayer(dsm_urlTemplate, settings);
+var xycartoDSMHS = new L.TileLayer(dsm_urlTemplate, settingsOverlay);
   
 var basemaps = {
       "LINZ Colour Base Map": linzColour
