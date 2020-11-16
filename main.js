@@ -60,21 +60,23 @@ var map = new L.Map('map', {
 
 //vectorTiles TODO
 
-var vectorURL = "https://xycarto.github.io/elevation.viewer.test/wellycontour_simple/{z}/{x}/{y}.pbf";
+//var vectorURL = "https://xycarto.github.io/elevation.viewer.test/wellycontour_simple/{z}/{x}/{y}.pbf";
 
 //var vectorURL = "http://localhost:8000/wellycontour_simple/{z}/{x}/{y}.pbf";
 
+var vectorURL = "http://localhost:8000/contourNZTM/contournztm/{z}/{x}/{y}.pbf"
+
 var vectorSettings = {
     maxZoom: 12,
-    minZoom: 8
+    minZoom: 9
   };
 
 var styles = {
     interactive: true,
-    minZoom: 8,
+    minZoom: 9,
     tileSize: 4096,
     vectorTileLayerStyles: {
-        wellycontour_simple: function(properties,zoom) {
+        contournztm: function(properties,zoom) {
             var level = map.getZoom();
             var weight = 1.0;
             if (level >= 10) {weight = 2.0;}
