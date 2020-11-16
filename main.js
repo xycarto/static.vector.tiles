@@ -7,46 +7,29 @@ var crs = new L.Proj.CRS(
     }
   );
   
-//overlays
+// raster overlays
 
 var dem_urlTemplate = 'https://xycarto-base-maps.s3-ap-southeast-2.amazonaws.com/wellyDEM-lidar/tile-cache/2020101712/wellyDEM-lidar/{z}/{x}/{y}.png'
   
 var dsm_urlTemplate = 'https://xycarto-base-maps.s3-ap-southeast-2.amazonaws.com/wellyDSM-lidar/tile-cache/2020101712/wellyDSM-lidar/{z}/{x}/{y}.png'
  
-var lowland_urlTemplate = 'https://maps.linz.io/tiles/wellyvation-lowlands-basemap/NZTM/{z}/{x}/{y}.png'
-
-var slope_urlTemplate = 'https://xycarto-base-maps.s3-ap-southeast-2.amazonaws.com/wellySLOPE-lidar/tile-cache/2020101712/wellySLOPE-lidar/{z}/{x}/{y}.png'
-
-//var slope_urlTemplate = 'http://localhost:8000/wellySLOPE-lidar/{z}/{x}/{y}.png'
 
 //basemaps
-var linzAerial_urlTemplate = 'https://basemaps.linz.govt.nz/v1/tiles/aerial/EPSG:2193/{z}/{x}/{y}.png?api=c01emr2n17q0qtdaens2m3abcwd'
-
 var linzColour_urlTemplate = 'https://tiles.maps.linz.io/nz_colour_basemap/NZTM/{z}/{x}/{y}.png'
 
-var linzTopo_urlTemplate = 'http://tiles-a.data-cdn.linz.govt.nz/services;key=1b85daaf8266427a9eb3f46a532cd2c7/tiles/v4/layer=50767/EPSG:2193/{z}/{x}/{y}.png'
-  
 var settingsOverlay = {
     tms: true,
     maxZoom: 12,
     tileSize: 512,
     continuousWorld: true,
-    attribution: '<a href="http://www.linz.govt.nz">Sourced from LINZ. CC-BY 4.0</a>', //Simple attribution for linz
+    attribution: '<a href="http://xycarto.com">Overlays Sourced From XYCarto</a>', //Simple attribution for linz
 };
 
 var settings = {
       tms: true,
       maxZoom: 12,
       continuousWorld: true,
-      attribution: '<a href="http://www.linz.govt.nz">Sourced from LINZ. CC-BY 4.0</a>', //Simple attribution for linz
-};
-  
-var settingsLL = {
-    tms: true,
-    minZoom: 6,
-    maxZoom: 12,
-    continuousWorld: true,
-    attribution: '<a href="http://www.linz.govt.nz">Sourced from LINZ. CC-BY 4.0</a>', //Simple attribution for linz
+      attribution: '<a href="http://www.linz.govt.nz">Colour Base Map Sourced from LINZ. CC-BY 4.0</a>', //Simple attribution for linz
 };
 
   
@@ -58,15 +41,8 @@ var map = new L.Map('map', {
 });
 
 
-//vectorTiles TODO
-
-//var vectorURL = "https://xycarto.github.io/elevation.viewer.test/wellycontour_simple/{z}/{x}/{y}.pbf";
-
-//var vectorURL = "http://localhost:8000/wellycontour_simple/{z}/{x}/{y}.pbf";
-
+//vectorTiles
 var vectorURL = "https://xycarto.github.io/static.vector.tiles/contournztm/{z}/{x}/{y}.pbf";
-
-//var vectorURL = "http://localhost:8000/contournztm/{z}/{x}/{y}.pbf"
 
 var vectorSettings = {
     maxZoom: 12,
@@ -86,8 +62,6 @@ var styles = {
                 weight: weight,
                 color: "#ff5633",
                 opacity: 0.75
-                //fillOpacity: 0.75,
-                //fill: true
     }}
   }
 };
@@ -97,12 +71,18 @@ var vector = L.vectorGrid.protobuf(vectorURL, styles);
 //basemaps
 
 var linzColour = new L.TileLayer(linzColour_urlTemplate, settings);
+
+var xycartoDEMHS = new L.TileLayer(dem_urlTemplate, settings);
+
+var xycartoDSMHS = new L.TileLayer(dsm_urlTemplate, settings);
   
 var basemaps = {
       "LINZ Colour Base Map": linzColour
       };
 
 var overlays = {
+      "DEM Hillshade": xycartoDEMHS,
+      "DSM Hillshade": xycartoDSMHS,
       "Contour 50m(>z8)": vector
 }
 
