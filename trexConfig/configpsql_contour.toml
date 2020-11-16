@@ -2,7 +2,7 @@
 viewer = true
 
 [[datasource]]
-dbconn = "postgresql://postgres:postgres@localhost/dbName"
+dbconn = "postgresql://postgres:postgres@localhost/nz_data"
 name = "dbconn"
 default = true
 
