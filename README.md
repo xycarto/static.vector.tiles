@@ -12,7 +12,7 @@ Process to create a static vector tile server using GitPages. The steps to creat
 
 The basic premise is: with your vector file, you need to construct a tile cache in MVT format with uncompressed PBF files. The MVT format is the same as any XYZ tile cache you would use for raster tiles. That tile cache will need to reside in a location accessible by your Leaflet application.   In this example we are using GitPages as our server and embedding our tiles directly along with the website we built.  In this instance, we are using Gitpages as our server.  
 
-### Download Data in NZTM (EPSG:2193) Projection
+### Download Raster Elevation Data in NZTM (EPSG:2193) Projection
 https://data.linz.govt.nz/layer/53621-wellington-lidar-1m-dem-2013/
 
 ### Build VRT
