@@ -100,7 +100,7 @@ Code snippet you will need to add to the JS for your site.
 Note, above you already told the Leaflet map it will be running in NZTM projection, plus you aready created your vector tile cache in NZTM format.  So, when Leaflet make the calls to the tile cache, it will be calling the tiles form the correct matrix.
 
 ```
-In your JS, place the URL where your tile cache resides.  In this case, my tile cache is embedded on my GitPages.
+//In your JS, place the URL where your tile cache resides.  In this case, my tile cache is embedded on my GitPages.
 var vectorURL = "https://xycarto.github.io/static.vector.tiles/contournztm/{z}/{x}/{y}.pbf";
 
 // Setting min max zoom
