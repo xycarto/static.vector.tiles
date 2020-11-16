@@ -64,18 +64,18 @@ var map = new L.Map('map', {
 
 //var vectorURL = "http://localhost:8000/wellycontour_simple/{z}/{x}/{y}.pbf";
 
-//var vectorURL = "https://xycarto.github.io/static.vector.tiles/contourNZTM/contournztm/{z}/{x}/{y}.pbf";
+var vectorURL = "https://xycarto.github.io/static.vector.tiles/contournztm/{z}/{x}/{y}.pbf";
 
-var vectorURL = "http://localhost:8000/contournztm/{z}/{x}/{y}.pbf"
+//var vectorURL = "http://localhost:8000/contournztm/{z}/{x}/{y}.pbf"
 
 var vectorSettings = {
     maxZoom: 12,
-    minZoom: 9
+    minZoom: 8
   };
 
 var styles = {
     interactive: true,
-    minZoom: 9,
+    minZoom: 8,
     tileSize: 4096,
     vectorTileLayerStyles: {
       wellycontour_simple: function(properties,zoom) {
