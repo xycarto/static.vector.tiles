@@ -64,7 +64,9 @@ var map = new L.Map('map', {
 
 //var vectorURL = "http://localhost:8000/wellycontour_simple/{z}/{x}/{y}.pbf";
 
-var vectorURL = "http://localhost:8000/contourNZTM/contournztm/{z}/{x}/{y}.pbf"
+var vectorURL = "https://xycarto.github.io/static.vector.tiles/contourNZTM/contournztm/{z}/{x}/{y}.pbf";
+
+//var vectorURL = "http://localhost:8000/contourNZTM/contournztm/{z}/{x}/{y}.pbf"
 
 var vectorSettings = {
     maxZoom: 12,
