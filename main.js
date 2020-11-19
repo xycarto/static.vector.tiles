@@ -50,7 +50,7 @@ var vectorSettings = {
   };
 
 var styles = {
-    interactive: true,
+    interactive: false,
     minZoom: 8,
     tileSize: 4096,
     vectorTileLayerStyles: {
