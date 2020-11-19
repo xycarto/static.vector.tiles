@@ -46,12 +46,12 @@ var vectorURL = "https://xycarto.github.io/static.vector.tiles/contournztm/{z}/{
 
 var vectorSettings = {
     maxZoom: 12,
-    minZoom: 8
+    minZoom: 10
   };
 
 var styles = {
     interactive: false,
-    minZoom: 8,
+    minZoom: 10,
     tileSize: 4096,
     vectorTileLayerStyles: {
       wellycontour_simple: function(properties,zoom) {
@@ -83,7 +83,7 @@ var basemaps = {
 var overlays = {
       "DEM Hillshade": xycartoDEMHS,
       "DSM Hillshade": xycartoDSMHS,
-      "Contour 50m(>z8)": vector
+      "Contour 50m(>z10)": vector
 }
 
 var settingsControl = {
