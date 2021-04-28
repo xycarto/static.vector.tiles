@@ -50,7 +50,7 @@ var vectorSettings = {
   };
 
 var styles = {
-    interactive: false,
+    interactive: true,
     minZoom: 10,
     tileSize: 4096,
     vectorTileLayerStyles: {
@@ -66,7 +66,9 @@ var styles = {
   }
 };
 
-var vector = L.vectorGrid.protobuf(vectorURL, styles);
+var vector = L.vectorGrid.protobuf(vectorURL, styles).on('click', function(e){
+  console.log(e.layer.properties)
+});
 
 //basemaps
 
